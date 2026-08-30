@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #020b14;
+    color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+/* Canvas da animação Matrix no fundo */
+#matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Wrapper centralizado */
+.site-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* ==========================================================
+   HEADER / HERO
+   ========================================================== */
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.nome-site {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.titulo {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.subtitulo {
+    font-size: 90px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 10px 0 30px 0;
+    color: #94B7ED;
+}
+
+.imagens-header {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.img-cabecalho {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.header-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 10px;
+}
+
+.dicas-abaixo, .mercado-livre {
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.mercado-livre:hover {
+    color: #94B7ED;
+}
+
+/* ==========================================================
+   DICAS
+   ========================================================== */
+.dicas-titulo {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.grid-dicas {
+    display: flex;
+    gap: 30px;
+}
+
+.card-dica {
+    background: rgba(2, 11, 20, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.card-dica h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #94B7ED;
+}
+
+.card-dica p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.img-dica {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-top: auto;
+}
+
+/* ==========================================================
+   VENDAS / OFERTAS
+   ========================================================== */
+.secao-vendas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mais-ofertas-aqui {
+    font-size: 22px;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.grid-vendas {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.card-produto {
+    background: rgba(2, 11, 20, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.texto-produto {
+    font-size: 16px;
+    min-height: 48px;
+    margin-bottom: 15px;
+}
+
+.img-produto {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.preco-produto {
+    font-size: 14px;
+    color: #00ff88;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.btn-compra {
+    background-color: #94B7ED;
+    color: #020b14;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-compra:hover {
+    background-color: #ffffff;
+}
+
+/* ==========================================================
+   RODAPÉ
+   ========================================================== */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* ==========================================================
+   RESPONSIVO (DISPOSITIVOS MÓVEIS / CELULAR)
+   ========================================================== */
+@media (max-width: 768px) {
+    .subtitulo {
+        font-size: 50px;
+    }
+
+    .imagens-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .header-links {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .grid-dicas, .grid-vendas {
+        flex-direction: column;
+    }
+
+    .texto-produto {
+        min-height: auto;
+    }
+}
