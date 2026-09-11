@@ -75,14 +75,6 @@ body {
     object-fit: contain;
 }
 
-.header-links {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 900px;
-    margin-top: 10px;
-}
-
 .dicas-abaixo, .mercado-livre {
     font-size: 18px;
     color: #FFFFFF;
