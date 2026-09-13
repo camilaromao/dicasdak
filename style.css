@@ -135,13 +135,13 @@ body {
 /* ==========================================================
    VENDAS / OFERTAS
    ========================================================== */
-.secao-vendas {
+.secao-recomendo {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.mais-ofertas-aqui {
+.Comprei-recomendo {
     font-size: 22px;
     color: #FFFFFF;
     text-decoration: none;
@@ -203,6 +203,22 @@ body {
     background-color: #ffffff;
 }
 
+
+.mais-ofertas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.mais-ofertas-aqui {
+    font-size: 22px;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
 /* ==========================================================
    RODAPÉ
    ========================================================== */
@@ -225,12 +241,6 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 20px;
-    }
-
-    .header-links {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
     }
 
     .grid-dicas, .grid-vendas {
