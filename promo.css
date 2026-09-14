@@ -1,0 +1,190 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ================================
+   TELA DE ABERTURA RESPONSIVA
+================================ */
+
+#preloader {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    overflow: hidden;
+
+    z-index: 99999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#animacao-abertura {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+}
+
+
+/* Quando o vídeo terminar */
+
+#preloader.escondido {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* ====== Seção do nome do site ====== */
+
+.nome-site {
+    text-align: center;
+    padding: 30px;
+}
+
+
+/* ==========================================================
+   VENDAS / OFERTAS
+   ========================================================== */
+
+.secao-recomendo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kits-upgrade {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.kits-upgrade-cpu {
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.kits-upgrade-gpu {
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.peças-completar {
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.grid-vendas {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+}
+
+.card-produto {
+    background: rgba(162, 170, 178, 0.524);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.texto-produto {
+    font-size: 16px;
+    min-height: 48px;
+    margin-bottom: 15px;
+}
+
+.img-produto {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.preco-produto {
+    font-size: 14px;
+    color: #0da05c;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.btn-compra {
+    background-color: #94B7ED;
+    color: #020b14;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-compra:hover {
+    background-color: #a3e9b2;
+}
+
+.mais-ofertas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.mais-ofertas-aqui {
+    font-size: 22px;
+    color: #332a2a;
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+
+/* ==========================================================
+   RODAPÉ
+   ========================================================== */
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+/* ==========================================================
+   RESPONSIVO (DISPOSITIVOS MÓVEIS / CELULAR)
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    .grid-vendas {
+        flex-direction: column;
+    }
+
+    .texto-produto {
+        min-height: auto;
+    }
+}
+
