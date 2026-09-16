@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -6,50 +5,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-
-/* ================================
-   TELA DE ABERTURA RESPONSIVA
-================================ */
-
-#preloader {
-    position: fixed;
-    inset: 0;
-
-    width: 100vw;
-    height: 100dvh;
-
-    overflow: hidden;
-
-    z-index: 99999;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    opacity: 1;
-    visibility: visible;
-
-    transition: opacity 0.8s ease, visibility 0.8s ease;
-}
-
-#animacao-abertura {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    display: block;
-}
-
-
-/* Quando o vídeo terminar */
-
-#preloader.escondido {
-    opacity: 0;
-    visibility: hidden;
+    background: #000000;
 }
 
 
@@ -57,7 +13,8 @@ body {
 
 .nome-site {
     text-align: center;
-    padding: 30px;
+    padding: 50px;
+    color: aliceblue;
 }
 
 
@@ -69,27 +26,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: aliceblue;
 }
 
-.kits-upgrade {
-    margin-bottom: 10px;
-    margin-top: 20px;
+.kits-upgrade  {
+   margin-top: 30px;
 }
 
-.kits-upgrade-cpu {
-    margin-bottom: 10px;
-    margin-top: 50px;
+.kits-upgrade-cpu , .kits-upgrade-gpu , .peças-completar  {
+    margin-top: 60px;
 }
 
-.kits-upgrade-gpu {
-    margin-bottom: 10px;
-    margin-top: 50px;
-}
-
-.peças-completar {
-    margin-bottom: 10px;
-    margin-top: 50px;
-}
+/* ====== GRID DOS PRODUTOS ====== */
 
 .grid-vendas {
     display: flex;
@@ -98,18 +46,49 @@ body {
     width: 100%;
 }
 
+
+/* ====== CARD ====== */
+
 .card-produto {
-    background: rgba(162, 170, 178, 0.524);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 25px;
+    background-color: rgba(42, 42, 42, 0.092);
+    border-radius: 20px;
+
     flex: 1;
+    position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    backdrop-filter: blur(5px);
+
+    margin-top: 80px;
+    padding: 2px;
+
+    overflow: hidden;
+    box-sizing: border-box;
 }
+
+/* ====== CONTEÚDO DO CARD ====== */
+.conteudo {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(80px);
+
+    z-index: 2;
+}
+
+/* ==========================================================
+   PRODUTO
+   ========================================================== */
 
 .texto-produto {
     font-size: 16px;
@@ -120,24 +99,35 @@ body {
 .img-produto {
     width: 180px;
     height: 180px;
+
     object-fit: contain;
+
     margin-bottom: 15px;
 }
 
 .preco-produto {
     font-size: 14px;
     color: #0da05c;
+
     margin-bottom: 15px;
+
     font-weight: bold;
 }
+
+
+/* ====== BOTÃO ====== */
 
 .btn-compra {
     background-color: #94B7ED;
     color: #020b14;
+
     padding: 10px 20px;
+
     border-radius: 8px;
+
     text-decoration: none;
     font-weight: bold;
+
     transition: 0.3s;
 }
 
@@ -145,18 +135,59 @@ body {
     background-color: #a3e9b2;
 }
 
+
+/* ==========================================================
+   EFEITO DA LUZ
+   ========================================================== */
+
+.luz {
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    top: 0;
+    left: 0;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        #6886ff 0%,
+        rgba(104, 134, 255, 0) 70%
+    );
+
+    opacity: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    transform: translate(-100px, -100px);
+
+    transition: opacity 0.2s ease;
+}
+
+/* ==========================================================
+   MAIS OFERTAS
+   ========================================================== */
+
 .mais-ofertas {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     margin-top: 60px;
 }
 
 .mais-ofertas-aqui {
     font-size: 22px;
     color: #332a2a;
+
     text-decoration: none;
+
     margin-bottom: 30px;
+
     font-weight: bold;
 }
 
@@ -167,14 +198,19 @@ body {
 
 footer {
     text-align: center;
+
     padding: 20px 0;
+
     font-size: 14px;
+
     opacity: 0.8;
+
+    color: aliceblue;
 }
 
 
 /* ==========================================================
-   RESPONSIVO (DISPOSITIVOS MÓVEIS / CELULAR)
+   RESPONSIVO
    ========================================================== */
 
 @media (max-width: 768px) {
@@ -186,5 +222,5 @@ footer {
     .texto-produto {
         min-height: auto;
     }
-}
 
+}

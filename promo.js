@@ -1,49 +1,43 @@
-
 // =====================================================
-// 🎬 BANNER ANIMADO DE ABERTURA
+// EFEITO DE LUZ NOS CARDS
 // =====================================================
 
-window.addEventListener("load", () => {
+const cards = document.querySelectorAll(".card-produto");
 
-    const video = document.getElementById("animacao-abertura");
-    const preloader = document.getElementById("preloader");
+cards.forEach((card) => {
 
-    if (!video || !preloader) return;
+    const luz = card.querySelector(".luz");
 
+    // Quando o mouse entra no card
+    card.addEventListener("mouseenter", () => {
 
-    // Verifica se a pessoa está usando celular
-    const celular = window.matchMedia("(max-width: 768px)").matches;
+        luz.style.opacity = "1";
 
-
-    // Escolhe o vídeo correto
-    if (celular) {
-        video.src = "assets/banner-celular.webm";
-    } else {
-        video.src = "assets/banner-desktop.webm";
-    }
-
-
-    // Carrega o vídeo
-    video.load();
-
-
-    // Começa o vídeo
-    video.play().catch(() => {
-        console.log("O navegador bloqueou o autoplay do vídeo.");
     });
 
 
-    // Quando o vídeo terminar
-    video.addEventListener("ended", () => {
+    // Quando o mouse se movimenta dentro do card
+    card.addEventListener("mousemove", (e) => {
 
-        // Faz a tela desaparecer suavemente
-        preloader.classList.add("escondido");
+        const posicaoCard = card.getBoundingClientRect();
+
+        const mouseX = e.clientX - posicaoCard.left;
+        const mouseY = e.clientY - posicaoCard.top;
+
+        luz.style.transform = `
+            translate(
+                ${mouseX - 100}px,
+                ${mouseY - 100}px
+            )
+        `;
+
+    });
 
 
-        // Remove o preloader depois da transição
-        setTimeout(() => {
-            preloader.remove();
-        }, 800);
+    // Quando o mouse sai do card
+    card.addEventListener("mouseleave", () => {
+
+        luz.style.opacity = "0";
 
     });
 
