@@ -50,3 +50,7 @@ const canvas = document.getElementById('matrixCanvas');
       columns = Math.floor(canvas.width / fontSize);
       drops = Array(columns).fill(1);
     });
+
+
+
+   
