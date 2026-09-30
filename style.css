@@ -32,6 +32,7 @@ body {
     gap: 60px;
 }
 
+
 /* ==========================================================
    HEADER / HERO
    ========================================================== */
@@ -203,7 +204,6 @@ body {
     background-color: #ffffff;
 }
 
-
 .mais-ofertas {
     display: flex;
     flex-direction: column;
@@ -218,6 +218,11 @@ body {
     margin-bottom: 30px;
     font-weight: bold;
 }
+
+.mais-ofertas-aqui:hover {
+   color:#00ff88 ;
+}
+
 
 /* ==========================================================
    RODAPÉ
