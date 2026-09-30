@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 body {
     background-color: #020b14;
     color: #FFFFFF;
     overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Canvas da animação Matrix no fundo */
@@ -99,13 +99,16 @@ body {
 .grid-dicas {
     display: flex;
     gap: 30px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
 }
 
 .card-dica {
     background: rgba(2, 11, 20, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    padding: 30px;
+    padding: 40px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -114,13 +117,13 @@ body {
     backdrop-filter: blur(5px);
 }
 
-.card-dica h2 {
+.Peça {
     font-size: 22px;
     margin-bottom: 15px;
     color: #94B7ED;
 }
 
-.card-dica p {
+.dica {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
