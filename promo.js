@@ -43,6 +43,17 @@ const canvas = document.getElementById('matrixCanvas');
       }
     }
 
+    // Executa a animação
+    setInterval(draw, 33);
+
+    // Mantém o efeito responsivo caso o usuário redimensione a janela
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      columns = Math.floor(canvas.width / fontSize);
+      drops = Array(columns).fill(1);
+    });
+
+
 
 // =====================================================
 // EFEITO DE LUZ NOS CARDS
